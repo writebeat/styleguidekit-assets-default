@@ -133,5 +133,5 @@ gulp.task('default', ['build:bower', 'build:css-patternlab', 'build:html', 'buil
 		gulp.watch(['src/html/*'], ['build:html']);
 		gulp.watch(['src/js/*'], ['build:js-pattern']);
 	}
-	
+
 });
