@@ -98,6 +98,14 @@
 #HEADER
 \*------------------------------------*/
 /**
+* Broward College's Logo.
+*/
+.bc-logo {
+  max-width: 200px;
+  width: 20%;
+}
+
+/**
 * Pattern Lab's header is fixed across the top of the viewport and
 * contains the primary pattern navigation, viewport resizing items,
 * and tools.
@@ -126,7 +134,7 @@
 }
 .sg-header a {
   font-size: 70%;
-  color: #808080;
+  color: #fff;
   text-decoration: none;
   line-height: 1;
   padding: 1em 0.7em;
@@ -137,7 +145,7 @@
 }
 .sg-header a:hover, .sg-header a:focus, .sg-header a.active {
   color: #fff;
-  background: #222;
+  background: #002e52;
 }
 
 /*------------------------------------*\
@@ -163,6 +171,9 @@
 /**
 * Navigation container
 */
+.sg-nav-container {
+  background: #005696;
+}
 @media all and (max-width: 42em) {
   .sg-nav-container {
     overflow: hidden;
@@ -291,10 +302,15 @@
 }
 .sg-acc-panel a {
   display: block;
+  -webkit-transition: background 0.1s ease-out;
+          transition: background 0.1s ease-out;
 }
 .sg-acc-panel.active {
   max-height: 120em;
   overflow: auto;
+}
+.sg-acc-panel.hover {
+  background: #002e52;
 }
 .sg-acc-panel.sg-right {
   position: absolute;
@@ -362,7 +378,7 @@
 */
 .sg-current-size {
   font-size: 70%;
-  color: #808080;
+  color: #fff;
   padding: 0.85em 0.7em;
 }
 @media all and (min-width: 53em) {
@@ -388,8 +404,8 @@
   padding: 0.1em;
   border: 0;
   border-radius: 3px;
-  background: #000;
-  color: #808080;
+  background: #808080;
+  color: #fff;
   width: 25px;
   text-align: right;
   -webkit-transition: all 0.1s ease-out;
@@ -401,8 +417,8 @@
 }
 .sg-input:active, .sg-input:focus {
   outline: 0;
-  background: #808080;
-  color: #fff;
+  background: #fff;
+  color: #000;
 }
 @media all and (min-width: 42em) {
   .sg-input {
@@ -449,8 +465,8 @@
 */
 .sg-tools-toggle {
   font-size: 70%;
-  background: #000;
-  color: #808080;
+  background: #005696;
+  color: #fff;
   text-decoration: none;
   line-height: 1;
   border: 0;
@@ -460,6 +476,9 @@
 .sg-tools-toggle:after {
   display: none;
   content: "";
+}
+.sg-tools-toggle path {
+  fill: #fff;
 }
 
 /**

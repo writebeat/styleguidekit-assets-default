@@ -63,6 +63,8 @@ $sg-font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 // Colors
 $sg-black : #000;
 $sg-white : #fff;
+$sg-bcw-blue-1: #005696;
+$sg-bcw-blue-2: #002e52;
 $sg-gray-light : #eee;
 $sg-gray-light-2 : #ddd;
 $sg-gray-light-3 : #ccc;
@@ -156,13 +158,17 @@ $sg-border-radius-med : 6px;
     -webkit-text-size-adjust: 100%;
 }
 
-
-
-
-
 /*------------------------------------*\
 #HEADER
 \*------------------------------------*/
+
+/**
+* Broward College's Logo.
+*/
+.bc-logo {
+  max-width: 200px;
+  width: 20%;
+}
 
 /**
 * Pattern Lab's header is fixed across the top of the viewport and
@@ -194,7 +200,7 @@ $sg-border-radius-med : 6px;
     */
     a {
         font-size: $sg-font-size-sm;
-        color: $sg-gray;
+        color: $sg-white;
         text-decoration: none;
         line-height: 1;
         padding: 1em 0.7em;
@@ -203,7 +209,7 @@ $sg-border-radius-med : 6px;
 
         &:hover, &:focus, &.active {
             color: $sg-white;
-            background: $sg-gray-dark;
+            background: $sg-bcw-blue-2;
         }
     }
 }
@@ -234,6 +240,7 @@ $sg-border-radius-med : 6px;
 * Navigation container
 */
 .sg-nav-container {
+    background: #005696;
     @media all and (max-width: $sg-bp-med) {
         overflow: hidden;
         max-height: 0;
@@ -369,6 +376,7 @@ $sg-border-radius-med : 6px;
     */
     a {
         display: block;
+        transition: background $sg-animate-quick ease-out;
     }
 
     /**
@@ -377,6 +385,9 @@ $sg-border-radius-med : 6px;
     &.active {
         max-height: 120em;
         overflow: auto;
+    }
+    &.hover {
+      background: $sg-bcw-blue-2;
     }
 
     /**
@@ -461,7 +472,7 @@ $sg-border-radius-med : 6px;
 */
 .sg-current-size {
     font-size: 70%;
-    color: $sg-gray;
+    color: $sg-white;
     padding: 0.85em 0.7em;
 
     @media all and (min-width: $sg-bp-large) {
@@ -486,8 +497,8 @@ $sg-border-radius-med : 6px;
     padding: 0.1em;
     border: 0;
     border-radius: $sg-border-radius;
-    background: $sg-black;
-    color: $sg-gray;
+    background: $sg-gray;
+    color: $sg-white;
     width: 25px;
     text-align: right;
     transition: all $sg-animate-quick ease-out;
@@ -499,8 +510,8 @@ $sg-border-radius-med : 6px;
 
     &:active, &:focus {
         outline: 0;
-        background: $sg-gray;
-        color: $sg-white;
+        background: $sg-white;
+        color: $sg-black;
     }
 
     @media all and (min-width: $sg-bp-med) {
@@ -555,8 +566,8 @@ $sg-border-radius-med : 6px;
 */
 .sg-tools-toggle {
     font-size: $sg-font-size-sm;
-    background: $sg-black;
-    color: $sg-gray;
+    background: $sg-bcw-blue-1;
+    color: $sg-white;
     text-decoration: none;
     line-height: 1;
     border: 0;
@@ -566,6 +577,9 @@ $sg-border-radius-med : 6px;
     &:after {
         display: none;
         content: "";
+    }
+    path {
+      fill: $sg-white;
     }
 }
 
@@ -1148,7 +1162,7 @@ $sg-border-radius-med : 6px;
    pre[class*=language-] {
      white-space: pre-wrap;
      @media all and (min-width: 42em) {
-       white-space: pre;		
+       white-space: pre;
      }
    }
  }
