@@ -87,6 +87,7 @@ $sg-doublespace : $sg-space*2;
 $sg-pad : 1em;
 $sg-pad-half : $sg-pad/2;
 $offset-top : 7em;
+$menu-height: 2em;
 
 // Breakpoints
 $sg-bp-small : 24em;
@@ -275,7 +276,7 @@ $sg-border-radius-med : 6px;
 
             > ol {
                 position: absolute;
-                top: $offset-top;
+                top: $menu-height;
                 left: 0;
             }
 

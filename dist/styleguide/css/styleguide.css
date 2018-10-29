@@ -213,7 +213,7 @@
   }
   .sg-nav > li > ol {
     position: absolute;
-    top: 7em;
+    top: 2em;
     left: 0;
   }
 }
